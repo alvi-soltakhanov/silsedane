@@ -2,18 +2,24 @@
 .WrapperNavbar {
   width: 100%;
   background: var(--inverted-bg-color);
+  font-size: 16px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  justify-content: center;
+  box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
 }
 
 .Navbar {
-  width: 1440px;
+  width: 80%;
   height: var(--navbar-height);
   padding: 20px;
   display: flex;
   align-items: center;
-  justify-content: right;
+  justify-content: space-between;
   background: var(--inverted-bg-color);
 }
 
-.link {
-  margin-left: 40px;
-}
+
+
+

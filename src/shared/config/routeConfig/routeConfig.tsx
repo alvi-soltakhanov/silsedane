@@ -1,15 +1,18 @@
 import { RouteProps } from "react-router-dom";
-import { AboutPage } from "pages/AboutPage";
+import { DictionaryPage } from "pages/DictionaryPage";
 import { MainPage } from "pages/MainPage";
+import NewsPage from "pages/NewsPage/ui/NewsPage";
 
 export enum AppRoutes {
   MAIN = "main",
-  ABOUT = "about",
+  DICTIONARY = "dictionary",
+  NEWS = "news",
 }
 
 export const RoutePath: Record<AppRoutes, string> = {
   [AppRoutes.MAIN]: '/',
-  [AppRoutes.ABOUT]: '/about',
+  [AppRoutes.DICTIONARY]: '/dictionary',
+  [AppRoutes.NEWS]: '/news',
 };
 
 export const routeConfig: Record<AppRoutes, RouteProps> = {
@@ -17,8 +20,12 @@ export const routeConfig: Record<AppRoutes, RouteProps> = {
     path: RoutePath.main,
     element: <MainPage />,
   },
-  [AppRoutes.ABOUT]: {
-    path: RoutePath.about,
-    element: <AboutPage />,
+  [AppRoutes.DICTIONARY]: {
+    path: RoutePath.dictionary,
+    element: <DictionaryPage />,
+  },
+  [AppRoutes.NEWS]: {
+    path: RoutePath.news,
+    element: <NewsPage />,
   },
 };
